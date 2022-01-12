@@ -1,8 +1,25 @@
-from flask import Flask, jsonify, request
-
+from flask import Flask, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
-@app.route("/api/hello")
-def hello():
-    return jsonify({"hello": "world"})
+pokemons = {
+    "bulbasaur": {
+        "species": {
+            "name": "bulbasaur",
+        },
+        "sprites": {
+            "front_shiny": "https://picsum.photos/200"  # dummy image
+        }
+    }
+}
+
+@app.route("/api/v1/pokemon/<name>")
+def pokemon(name):
+    pokemon = pokemons.get(name, None)
+    if pokemon:
+        return jsonify(pokemon), 200
+    else:
+        return jsonify({}), 400
+
