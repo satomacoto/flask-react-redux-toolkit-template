@@ -1,6 +1,6 @@
-# Flask + Redux Toolkit template
+# Flask + React + Redux Toolkit template
 
-- Flask + Redux Toolkit template is a set of tools for building web applications with [Flask](https://flask.palletsprojects.com/en/2.0.x/) and [Redux Toolkit](https://redux-toolkit.js.org/introduction/getting-started).
+- Flask + React + Redux Toolkit template is a set of tools for building web applications with [Flask](https://flask.palletsprojects.com/en/2.0.x/), [Create React App](https://create-react-app.dev/) in TypeScript and [Redux Toolkit](https://redux-toolkit.js.org/introduction/getting-started).
 
 ## Requirements
 
